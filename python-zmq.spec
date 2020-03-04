@@ -8,6 +8,7 @@ Url:		https://github.com/zeromq/pyzmq
 Source0:	https://github.com/zeromq/pyzmq/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	pkgconfig(libzmq)
+BuildRequires:	python-cython
 
 %description
 This package contains Python bindings for ØMQ. ØMQ is a lightweight and
