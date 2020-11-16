@@ -1,12 +1,12 @@
 Summary:	Python bindings for zeromq
 Name:		python-zmq
-Version:	19.0.0
+Version:	20.0.0
 Release:	1
 Group:		Development/Python
 License:	GPLv2+
 Url:		https://github.com/zeromq/pyzmq
-Source0:	https://github.com/zeromq/pyzmq/archive/v%{version}/%{name}-%{version}.tar.gz
-BuildRequires:	pkgconfig(python3)
+Source0:	https://github.com/zeromq/pyzmq/archive/v%{version}/pyzmq-%{version}.tar.gz
+BuildRequires:	pkgconfig(python)
 BuildRequires:	pkgconfig(libzmq)
 BuildRequires:	python-cython
 
@@ -21,9 +21,9 @@ used by PyPy only supports libzmq ≥ 3.2.2 (including 4.x).
 
 %files -f %{name}.list
 %{py_platsitedir}/zmq/__pycache__
-%{py_platsitedir}/zmq/asyncio/__pycache__
+#{py_platsitedir}/zmq/asyncio/__pycache__
 %{py_platsitedir}/zmq/auth/__pycache__
-%{py_platsitedir}/zmq/auth/asyncio/__pycache__
+#{py_platsitedir}/zmq/auth/asyncio/__pycache__
 %{py_platsitedir}/zmq/backend/__pycache__
 %{py_platsitedir}/zmq/backend/cffi/__pycache__
 %{py_platsitedir}/zmq/backend/cython/__pycache__
@@ -37,7 +37,7 @@ used by PyPy only supports libzmq ≥ 3.2.2 (including 4.x).
 %{py_platsitedir}/zmq/ssh/__pycache__
 %{py_platsitedir}/zmq/sugar/__pycache__
 %{py_platsitedir}/zmq/tests/__pycache__
-%{py_platsitedir}/zmq/tests/asyncio/__pycache__
+#{py_platsitedir}/zmq/tests/asyncio/__pycache__
 %{py_platsitedir}/zmq/utils/__pycache__
 
 #------------------------------------------------------------
@@ -47,7 +47,7 @@ used by PyPy only supports libzmq ≥ 3.2.2 (including 4.x).
 %build
 %setup_compile_flags
 
-export LDFLAGS="%{ldflags} -lpython3.8"
+export LDFLAGS="%{ldflags} -lpython3.9"
 
 python setup.py \
 	build
