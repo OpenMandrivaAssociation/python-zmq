@@ -47,7 +47,7 @@ used by PyPy only supports libzmq ≥ 3.2.2 (including 4.x).
 %build
 %setup_compile_flags
 
-export LDFLAGS="%{ldflags} -lpython3.8"
+export LDFLAGS="%{ldflags} -lpython3.9"
 
 python setup.py \
 	build
