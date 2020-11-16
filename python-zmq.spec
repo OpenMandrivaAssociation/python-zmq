@@ -21,8 +21,8 @@ used by PyPy only supports libzmq ≥ 3.2.2 (including 4.x).
 
 %files -f %{name}.list
 %{py_platsitedir}/zmq/__pycache__
-%{py_platsitedir}/zmq/asyncio/__pycache__
-%{py_platsitedir}/zmq/auth/__pycache__
+#{py_platsitedir}/zmq/asyncio/__pycache__
+#{py_platsitedir}/zmq/auth/__pycache__
 %{py_platsitedir}/zmq/auth/asyncio/__pycache__
 %{py_platsitedir}/zmq/backend/__pycache__
 %{py_platsitedir}/zmq/backend/cffi/__pycache__
@@ -36,7 +36,7 @@ used by PyPy only supports libzmq ≥ 3.2.2 (including 4.x).
 %{py_platsitedir}/zmq/log/__pycache__
 %{py_platsitedir}/zmq/ssh/__pycache__
 %{py_platsitedir}/zmq/sugar/__pycache__
-%{py_platsitedir}/zmq/tests/__pycache__
+#{py_platsitedir}/zmq/tests/__pycache__
 %{py_platsitedir}/zmq/tests/asyncio/__pycache__
 %{py_platsitedir}/zmq/utils/__pycache__
 
