@@ -1,6 +1,6 @@
 Summary:	Python bindings for zeromq
 Name:		python-zmq
-Version:	19.0.0
+Version:	20.0.0
 Release:	1
 Group:		Development/Python
 License:	GPLv2+
