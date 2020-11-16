@@ -5,7 +5,7 @@ Release:	1
 Group:		Development/Python
 License:	GPLv2+
 Url:		https://github.com/zeromq/pyzmq
-Source0:	https://github.com/zeromq/pyzmq/archive/v%{version}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/zeromq/pyzmq/archive/v%{version}/pyzmq-%{version}.tar.gz
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	pkgconfig(libzmq)
 BuildRequires:	python-cython
