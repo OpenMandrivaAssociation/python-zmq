@@ -1,7 +1,7 @@
 Summary:	Python bindings for zeromq
 Name:		python-zmq
 Version:	20.0.0
-Release:	1
+Release:	2
 Group:		Development/Python
 License:	GPLv2+
 Url:		https://github.com/zeromq/pyzmq
@@ -47,7 +47,7 @@ used by PyPy only supports libzmq ≥ 3.2.2 (including 4.x).
 %build
 %setup_compile_flags
 
-export LDFLAGS="%{ldflags} -lpython3.9"
+export LDFLAGS="%{ldflags} -lpython3.11"
 
 python setup.py \
 	build
