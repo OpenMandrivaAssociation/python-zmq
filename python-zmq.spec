@@ -13,6 +13,7 @@ BuildSystem:	python
 
 BuildRequires:	clang
 BuildRequires:	cmake
+BuildRequires:	ninja
 BuildRequires:	pkgconfig
 BuildRequires:	pkgconfig(python)
 BuildRequires:	pkgconfig(libzmq)
