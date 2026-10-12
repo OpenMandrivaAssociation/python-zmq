@@ -4,7 +4,7 @@
 Name:		python-zmq
 Summary:	Python bindings for zeromq
 Version:	27.1.0
-Release:	1
+Release:	2
 Group:		Development/Python
 License:	BSD-3-Clause
 URL:		https://github.com/zeromq/pyzmq
