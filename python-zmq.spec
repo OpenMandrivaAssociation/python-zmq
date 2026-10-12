@@ -3,8 +3,8 @@
 
 Name:		python-zmq
 Summary:	Python bindings for zeromq
-Version:	27.1.0
-Release:	2
+Version:	27.2.0
+Release:	1
 Group:		Development/Python
 License:	BSD-3-Clause
 URL:		https://github.com/zeromq/pyzmq
@@ -37,8 +37,8 @@ used by PyPy only supports libzmq ≥ 3.2.2 (including 4.x).
 %package devel
 Summary:	Development files for %{name}
 Group:		Development/Python
-Requires:	%{name} = %{version}-%{release}
-Requires:	python-devel
+Requires:	%{name} = %{EVRD}
+Requires:	pkgconfig(python)
 Requires:	zeromq-devel
 
 %description devel
@@ -46,6 +46,8 @@ Development libraries and headers needed to build software using %{name}.
 
 %prep
 %autosetup -n pyzmq-%{version} -p1
+# Cooker cmake is newer than the range declared upstream.
+sed -i 's/cmake_minimum_required(VERSION 3.14...4.1)/cmake_minimum_required(VERSION 3.14...4.5)/g' CMakeLists.txt
 
 # Fix non-executable script rpmlint warning:
 find examples zmq -name "*.py" -exec sed -i "s|#\!\/usr\/bin\/env python||" {} \;
